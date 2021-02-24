@@ -1,6 +1,7 @@
 #!/bin/sh
 
 SCRIPT_BASE_DIR=$(dirname $0)
+
 SUNBIRD_DEVOPS_FOLDER=$SCRIPT_BASE_DIR
 
 if [ "$#" -ne 1 ]; then
