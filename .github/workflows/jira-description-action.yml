@@ -6,7 +6,7 @@ jobs:
   add-jira-description:
     runs-on: ubuntu-latest
     steps:
-      - uses: cakeinpanic/jira-description-action@v0.2.0
+      - uses: keshavprasadms/jira-description-action@0.0.1
         name: jira-description-action
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
