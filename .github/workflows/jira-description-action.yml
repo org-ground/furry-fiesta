@@ -14,4 +14,5 @@ jobs:
           jira-base-url: ${{ secrets.JIRA_BASE_URL }}
           fail-pr-when-jira-issue-not-found: ${{ secrets.FAIL_PR_WHEN_JIRA_ISSUE_NOT_FOUND }}
           skip-branches: '^(master|release\/v\d+)$'
+          custom-issue-number-regexp: '^\w+-\d+$'
           use: both
