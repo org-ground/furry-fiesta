@@ -25,4 +25,4 @@ jobs:
       - uses: atlassian/gajira-find-issue-key@master
         name: Find in commit messages     
         with:
-          from: branch
+          string: ${{ github.event.ref }}
