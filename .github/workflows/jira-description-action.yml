@@ -14,3 +14,16 @@ jobs:
           jira-base-url: ${{ secrets.JIRA_BASE_URL }}
           fail-when-jira-issue-not-found: ${{ secrets.FAIL_WHEN_JIRA_ISSUE_NOT_FOUND }}
           use: both
+
+      - uses: atlassian/gajira-login@master
+        name: Login
+        uses: atlassian/gajira-login@master
+        env:
+          JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+
+      - name: Find in commit messages
+        uses: atlassian/gajira-find-issue-key@master
+        with:
+          from: branch
