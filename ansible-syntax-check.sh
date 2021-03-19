@@ -11,6 +11,8 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+echo "OK"
+
 set -e
 INVENTORY_DIR=$1
 for playbook_yaml in $SUNBIRD_DEVOPS_FOLDER/ansible/*.yml; do
